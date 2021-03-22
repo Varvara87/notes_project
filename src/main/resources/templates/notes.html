@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/styles/notes.css">
+<title>Notes list</title>
+</head>
+<body>
+	<h1>Notes list</h1>
+	<form action="/notes/search">
+<input type="text" name="word">
+</form>
+	<a href="/notes/create">Create new note</a>
+	
+	<div class="all" th:each="note : ${notes}">
+		
+		<div th:text="${note.id}"></div>
+		<div th:text="${note.title}"></div>
+		<div th:text="${note.message}"></div>
+	 <div th:text="${note.create_date}"></div>
+		<div  th:text="${note.last_change_date}"></div>
+		<div>
+			<div>
+				<a th:href="@{/notes/{n}(n=${note.id})}">Info</a>
+			</div>
+			<div>
+				<a th:href="@{/notes/delete/{n}(n=${note.id})}">Delete</a>
+			</div>
+			<div>
+				<a th:href="@{/notes/edit/{n}(n=${note.id})}">Edit</a>
+			</div>
+		
+		</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/styles/notes.css">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Note info</h1>
+<div class="all">
+<div th:text="${note.id}"></div>
+<div th:text="${note.title}"></div>
+<div th:text="${note.message}"></div>
+<div th:text="${note.create_date}"></div>
+<div th:text="${note.last_change_date}"></div></div>
+</body>
+</html>

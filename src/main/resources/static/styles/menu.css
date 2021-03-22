@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.menu{
+	background-color:lime;
+	
+	border: 4px double rgb(128, 0, 128);
+	width: 300;
+
+
+	margin: auto;
+	
+	display:flex;
+
+	justify-content: space-between;
+	flex-direction: roll;
+	
+}

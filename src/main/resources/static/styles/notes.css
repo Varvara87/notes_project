@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.all{
+	background-color:silver;
+	
+	
+	width: 40%;
+	font-size: 100%; 
+    font-weight: bold;
+    	display:flex;
+    	flex-direction: row;
+    	border: inset;
+justify-content: space-around;
+align-items: center;
+flex-basis: content;
+	
+}
+h1{
+	background-color:#9c83cb;
+	
+	border: none;
+	width: 50%;
+	font-size: 200%; 
+    font-weight: bold;
+    	display:flex;
+
+	
+}
+a:link {
+  color: #000040; 
+  border-bottom: 1px dashed; 
+}
+a:visited {
+  color: #808080;
+}
+a:hover {
+  color: #00ffff; 
+  border-bottom: 1px dashed;
+}
+a:active {
+  color: #ff00ff; 
+  border-bottom: 1px dashed;
+}

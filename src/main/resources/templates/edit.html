@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>edit </h2>
+	<form action="/notes/change" th:object="${note}" method="post">
+		 <input th:field="*{id}" hidden>
+		  <input th:field="*{create_date}" hidden>
+		    <input th:field="*{last_change_date}" hidden>
+		<div>
+			<input th:field="*{title}" type="text" placeholder="title">
+		</div>
+		<div>
+			<textarea th:field="*{message}" placeholder="message"></textarea>
+		</div>
+		<input type="submit" value="Apply">
+	</form>
+</body>
+</html>
