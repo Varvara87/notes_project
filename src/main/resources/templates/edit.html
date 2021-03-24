@@ -2,10 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="/styles/notes.css">
 <title>Insert title here</title>
 </head>
 <body>
-<h2>edit </h2>
+<h1>EDIT NOTE </h1>
+<div class="all">
 	<form action="/notes/change" th:object="${note}" method="post">
 		 <input th:field="*{id}" hidden>
 		  <input th:field="*{create_date}" hidden>
@@ -18,5 +20,6 @@
 		</div>
 		<input type="submit" value="Apply">
 	</form>
+	</div>
 </body>
 </html>

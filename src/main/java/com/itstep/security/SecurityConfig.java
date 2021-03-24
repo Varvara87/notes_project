@@ -27,8 +27,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	// настраиваем АВТОРИЗАЦИЮ
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/").permitAll().antMatchers("/notes/**").authenticated()
-				.antMatchers("/admin_page/**").hasAuthority("ROLE_ADMIN").and().formLogin().and().logout().and().csrf()
+		http.authorizeRequests().antMatchers("/").permitAll()
+		.antMatchers("/notes/search").authenticated()
+		.antMatchers("/notes/**").hasAuthority("role_manager")
+				.antMatchers("/admin_page").hasAnyAuthority("role_admin","role_manager")
+				.and().formLogin().and().logout().and().csrf()
 				.disable();
 	}
 
