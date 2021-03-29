@@ -30,8 +30,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().antMatchers("/").permitAll()
 		.antMatchers("/notes/search").authenticated()
 		.antMatchers("/notes/**").hasAuthority("role_manager")
-				.antMatchers("/admin_page").hasAnyAuthority("role_admin","role_manager")
-				.and().formLogin().and().logout().and().csrf()
+		.antMatchers("/admin_page").hasAnyAuthority("role_admin","role_manager")
+				.and()
+				.formLogin().loginPage("/login")
+				.and().logout()
+				.and()
+				.rememberMe().userDetailsService(detailsService)
+				.and()
+				.exceptionHandling().accessDeniedPage("/login?denied")
+				.and().csrf()
 				.disable();
 	}
 

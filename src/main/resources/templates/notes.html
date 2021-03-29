@@ -2,10 +2,20 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/styles/notes.css">
+<link rel="stylesheet" href="/styles/notes.css" >
+<link rel="stylesheet" href="/styles/menu.css">
 <title>Notes list</title>
 </head>
 <body>
+<div class="menu">
+<div><a href="/">Home</a></div>
+<div><a href="/notes">Notes</a></div>
+<div><a href="/notes/search">Search note</a></div>
+<div><a href="/admin_page">Admin_page</a></div>
+
+<div><a href="/login">log in</a></div>
+<div><a href="/logout">log out</a></div>
+</div>
 	<h1>Notes list</h1>
 	<form action="/notes/search">
 <input type="text" name="word">

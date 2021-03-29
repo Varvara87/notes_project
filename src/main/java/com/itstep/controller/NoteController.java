@@ -1,7 +1,5 @@
 package com.itstep.controller;
 
-import java.sql.Date;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -81,4 +79,5 @@ public class NoteController {
 		model.addAttribute("notes", notes);
 		return "notes";
 	}
+
 }

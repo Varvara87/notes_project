@@ -1,18 +1,12 @@
 @charset "UTF-8";
-.menu{
-	background-color:rgb(129, 254, 145);
-	
+
+
+.menu {
+	background-color: rgb(129, 254, 145);
 	border: 4px double rgb(128, 0, 128);
 	width: 300;
-display:flex;
-
-flex-flow: row nowrap;
-	
-	
+	display: flex;
+	flex-flow: row nowrap;
 	justify-content: space-between;
-	
-	
 }
-.space{
-	flex-grow:1;
-}
+
